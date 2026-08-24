@@ -221,6 +221,25 @@ article.section table {
   margin: 12px 0 18px;
   font-size: 0.87rem;
 }
+article.section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 14px auto;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 14px rgba(44, 26, 77, 0.1);
+}
+article.section figure {
+  margin: 14px 0;
+  text-align: center;
+}
+article.section figcaption {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-top: 6px;
+  font-style: italic;
+}
 article.section th, article.section td {
   border: 1px solid var(--line);
   padding: 7px 10px;
