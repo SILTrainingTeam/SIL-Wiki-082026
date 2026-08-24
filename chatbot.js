@@ -28,10 +28,12 @@
 
   function scoreEntry(queryTokens, entry) {
     let score = 0;
-    const haystacks = [entry.q.toLowerCase(), ...entry.keywords.map((k) => k.toLowerCase())];
+    const allKeywords = entry.keywords.concat(entry.keywordsTL || []);
+    const haystacks = [entry.q.toLowerCase(), ...allKeywords.map((k) => k.toLowerCase())];
+    if (entry.qTL) haystacks.push(entry.qTL.toLowerCase());
     // exact keyword phrase match = big boost
     const lowerQuery = queryTokens.join(" ");
-    entry.keywords.forEach((k) => {
+    allKeywords.forEach((k) => {
       if (lowerQuery.includes(k.toLowerCase()) || k.toLowerCase().includes(lowerQuery)) {
         score += 5;
       }
@@ -78,16 +80,19 @@
   }
 
   function botReply(query) {
+    const lang = window.SIL_getLang ? window.SIL_getLang() : "en";
     const matches = findBestMatches(query, 1);
     if (!matches.length) {
-      appendMessage(
-        "I don't have that one yet. Try rephrasing, browse the wiki using the menu on the left, or ask your TSM / Sales Ops for anything not covered here.",
-        "bot"
-      );
+      const noMatchMsg =
+        lang === "tl"
+          ? "Wala pa akong sagot dyan. Subukang i-rephrase, mag-browse gamit ang menu sa kaliwa, o itanong sa iyong TSM / Sales Ops."
+          : "I don't have that one yet. Try rephrasing, browse the wiki using the menu on the left, or ask your TSM / Sales Ops for anything not covered here.";
+      appendMessage(noMatchMsg, "bot");
       return;
     }
     const best = matches[0];
-    appendMessage(best.a, "bot", best.sectionId);
+    const answer = lang === "tl" && best.aTL ? best.aTL : best.a;
+    appendMessage(answer, "bot", best.sectionId);
   }
 
   function seedSuggestions() {
@@ -146,9 +151,11 @@
   if (chatBadge) chatBadge.textContent = String(faqs.length);
 
   // Welcome message
-  appendMessage(
-    "Hi! I'm the SIL Wiki assistant. Ask me anything about SIL products, pricing, PayHinga, onboarding, incentives, or escalations — I'll answer from the training decks and memos, and link you to the full page.",
-    "bot"
-  );
+  const lang0 = window.SIL_getLang ? window.SIL_getLang() : "en";
+  const welcomeMsg =
+    lang0 === "tl"
+      ? "Kumusta! Ako ang SIL Wiki assistant. Itanong mo sa akin ang kahit ano tungkol sa SIL products, pricing, PayHinga, onboarding, incentives, o escalations — sasagutin ko galing sa training decks at memos, at ililink kita sa buong page."
+      : "Hi! I'm the SIL Wiki assistant. Ask me anything about SIL products, pricing, PayHinga, onboarding, incentives, or escalations — I'll answer from the training decks and memos, and link you to the full page.";
+  appendMessage(welcomeMsg, "bot");
   seedSuggestions();
 })();
