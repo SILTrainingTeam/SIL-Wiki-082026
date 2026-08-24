@@ -1,4 +1,4 @@
-/* AUTO-GENERATED public-safe FAQ file (excludes incentive/comp/strategy answers). */
+/* AUTO-GENERATED public-safe FAQ file. */
 const SIL_FAQS = [
   {
     "q": "Can a customer add PayHinga after the loan is already active?",
@@ -36,6 +36,18 @@ const SIL_FAQS = [
     "sectionId": "bundling-guidelines"
   },
   {
+    "q": "How do I calculate my KPI achievement?",
+    "a": "Target achievement = your actual result ÷ target. KPI achievement = target achievement × that KPI's weight. Add all 5 KPI achievements together for your Total Performance score, then check the A+/A/B/C/F rating scale.",
+    "keywords": [
+      "calculate kpi",
+      "kpi achievement",
+      "how is kpi computed",
+      "kpi formula",
+      "target achievement"
+    ],
+    "sectionId": "kpi-calculation-guide"
+  },
+  {
     "q": "How do I compute the monthly installment?",
     "a": "1) Item price minus DP = Financed Amount (FA). 2) Look up the add-on rate for that DP segment. 3) Add-on amount = FA × add-on rate. 4) Monthly installment = (FA ÷ term) + add-on amount. Example: ₱9,000 FA at 4% add-on, 12 months = ₱750 + ₱360 = ₱1,110/month.",
     "keywords": [
@@ -58,6 +70,17 @@ const SIL_FAQS = [
     "sectionId": "sil-counteroffer"
   },
   {
+    "q": "How do I log in to Sprout for timekeeping?",
+    "a": "Download the Sprout Mobile App, log in at purplehub.hrhub.ph, and turn on GPS before clocking in — you can only clock in at your assigned store. Default temporary password format: Temp-[birthdate]-[last 4 digits of TIN].",
+    "keywords": [
+      "sprout app",
+      "sprout login",
+      "timekeeping",
+      "clock in clock out"
+    ],
+    "sectionId": "payroll-timekeeping"
+  },
+  {
     "q": "How do I reopen a closed Tonik account?",
     "a": "If the mobile number is still active, the customer can self-service reopen: log in, accept the 'Reopen Account' prompt, verify OTP, accept T&Cs, do a face scan, upload a valid ID, confirm address, select banking purpose, and submit. If the number is inactive, they must contact Tonik Customer Care instead.",
     "keywords": [
@@ -67,6 +90,16 @@ const SIL_FAQS = [
       "reactivate account"
     ],
     "sectionId": "account-reopening"
+  },
+  {
+    "q": "How do I report a suspicious email?",
+    "a": "Do NOT forward it. Attach the suspicious email and send it to itservicedesk@tonikbank.com instead.",
+    "keywords": [
+      "suspicious email",
+      "report phishing",
+      "report suspicious email"
+    ],
+    "sectionId": "info-security-basics"
   },
   {
     "q": "How do I sign up for JIRA?",
@@ -114,6 +147,17 @@ const SIL_FAQS = [
     "sectionId": "down-payment-settlement"
   },
   {
+    "q": "How far in advance do I need to file a leave request?",
+    "a": "At least 3 days before the leave, for any absence including half-days. Sick leave should be filed within 24 hours of returning to work, with a medical certificate required if it exceeds 3 days.",
+    "keywords": [
+      "leave request",
+      "how to file leave",
+      "vacation leave notice",
+      "sick leave policy"
+    ],
+    "sectionId": "attendance-leave-policy"
+  },
+  {
     "q": "How long does a customer have to scan the QR code?",
     "a": "30 minutes. Press Done once scanned successfully, or press QR Code again to generate a fresh one if it expires.",
     "keywords": [
@@ -132,6 +176,16 @@ const SIL_FAQS = [
       "reference requirement"
     ],
     "sectionId": "pre-submission-checklist"
+  },
+  {
+    "q": "How many times can I be late before it's a problem?",
+    "a": "6 times late in a month (or an aggregate of 1 hour late) triggers disciplinary action and possible salary deduction. Being more than 2 hours late counts as only a half-day worked.",
+    "keywords": [
+      "how many times late",
+      "tardiness policy",
+      "late employment policy"
+    ],
+    "sectionId": "attendance-leave-policy"
   },
   {
     "q": "If a loan is rejected, when can the customer reapply?",
@@ -176,6 +230,27 @@ const SIL_FAQS = [
     "sectionId": "welcome-card"
   },
   {
+    "q": "What are red flags for a risky customer?",
+    "a": "No regular income, no bank account/financial footprint, elderly and not tech-savvy, multiple dependents with no extra income, no valid ID, salary that doesn't match the requested loan, already deep in other debt, or no permanent address. Also watch behavior: rushing, asking for the 'maximum amount,' wanting delivery before approval, or unreachable references.",
+    "keywords": [
+      "red flag customer",
+      "risky customer signs",
+      "who to reject",
+      "pre-qualification red flags"
+    ],
+    "sectionId": "red-flag-customers"
+  },
+  {
+    "q": "What are the 5 Standards of Conduct in FCP?",
+    "a": "Disclosure & Transparency, Protection of Client Information, Fair Treatment, Effective Recourse, and Protection of Consumer Assets Against Fraud and Misuse. These govern every SIL customer interaction.",
+    "keywords": [
+      "5 standards of conduct",
+      "fcp",
+      "financial consumer protection"
+    ],
+    "sectionId": "fcp-standards"
+  },
+  {
     "q": "What are the Facebook posting guidelines for Purple Pros?",
     "a": "Post a few times a day spaced out, ideally during low-traffic hours. Share Tonik's and your store's official posts. Personal sales posts are fine if you represent yourself as a Purple Pro, show Tonik branding, and use the prescribed hashtags (#PurplePros4Tonik #TrustThePros #TonikSIL). Never use foul language, and get a signed Consent Form before featuring a customer or coworker.",
     "keywords": [
@@ -198,6 +273,18 @@ const SIL_FAQS = [
       "verify customer"
     ],
     "sectionId": "pre-submission-checklist"
+  },
+  {
+    "q": "What are the types of fraud I should watch for?",
+    "a": "Fraud Application (fake IDs), Identity Theft (stolen identity), White Horse (using a consenting acquaintance's identity), Internal Fraud (a Purple Pro manipulating data), Encashment (reselling the item with no intent to pay), and Pyramid (an organized group of fraudsters applying together).",
+    "keywords": [
+      "types of fraud",
+      "fraud types",
+      "white horse",
+      "encashment",
+      "pyramid fraud"
+    ],
+    "sectionId": "types-of-fraud"
   },
   {
     "q": "What documents does the customer sign after approval?",
@@ -234,6 +321,17 @@ const SIL_FAQS = [
     "sectionId": "promoter-app-login"
   },
   {
+    "q": "What happens to a customer if they don't pay?",
+    "a": "Late fees, growing interest, blocked from future loans, and a report to the Credit Information Corporation (CIC) that can affect future borrowing. It can also mean collection calls to relatives, barangay complaints, losing the item (not fully owned until paid), and losing access to BNPL apps, telco postpaid, or housing/auto loans down the line.",
+    "keywords": [
+      "consequences of non payment",
+      "what happens if i dont pay",
+      "default consequences",
+      "unpaid loan"
+    ],
+    "sectionId": "consequences-of-nonpayment"
+  },
+  {
     "q": "What ID types are accepted?",
     "a": "Philippine Passport, Driver's License, UMID, SSS ID, PRC ID, Postal ID, PhilSys/National ID, eGov ID, Digital National ID. e-PhilID and Temporary Driver's License are under review. If an ID expires within 45 days, the customer must re-upload a valid one.",
     "keywords": [
@@ -256,6 +354,28 @@ const SIL_FAQS = [
       "id types"
     ],
     "sectionId": "id-verification"
+  },
+  {
+    "q": "What is an NTE and how long does the process take?",
+    "a": "A Notice to Explain is a 7-step disciplinary process: NTE prep/review, your written explanation (5 business days), HR evaluation (2 business days), hearing notice, the hearing itself, deliberation (5 business days), then a final decision.",
+    "keywords": [
+      "nte",
+      "notice to explain",
+      "nte process",
+      "disciplinary process"
+    ],
+    "sectionId": "code-of-conduct-summary"
+  },
+  {
+    "q": "What is FSTPD30?",
+    "a": "It's Tonik's core risk metric. Booked-based FSTPD30 answers 'what % of my booked loans went unpaid?' — a quick view of a Purple Pro's risk. Volume-based FSTPD30 answers 'what % of my financed amount went unpaid?' — this is the basis for an NTE.",
+    "keywords": [
+      "fstpd30",
+      "what is fstpd30",
+      "risk metric",
+      "fstpd30 explained"
+    ],
+    "sectionId": "fstpd30-explained"
   },
   {
     "q": "What is LEX or Bolttech warranty?",
@@ -350,6 +470,16 @@ const SIL_FAQS = [
     "sectionId": "rbp-tables"
   },
   {
+    "q": "What is the Tendo salary loan?",
+    "a": "A payroll-linked digital loan for PHI employees, powered by Tonik Bank. Loanable amount is up to 100% of monthly salary, repayable over up to 12 months with automatic salary deduction. Apply via the Tendo by Tonik app.",
+    "keywords": [
+      "tendo loan",
+      "salary loan",
+      "employee loan"
+    ],
+    "sectionId": "employee-benefits"
+  },
+  {
     "q": "What is the Welcome Card?",
     "a": "A credit-card sized card given to every customer with a successfully booked SIL, listing their Tonik Savings Account number, due date, monthly installment, and loan end date. Write the customer's name on the front and remind them to pay 3-5 days before the due date.",
     "keywords": [
@@ -406,6 +536,17 @@ const SIL_FAQS = [
     "sectionId": "app-troubleshooting"
   },
   {
+    "q": "What's the difference between Personal Information and Sensitive Personal Information?",
+    "a": "Personal Information (PI) is basic identifying details like name, birthday, address. Sensitive Personal Information (SPI) is higher-risk data needing extra protection — race, religion, health, government ID numbers, legal records, etc.",
+    "keywords": [
+      "personal information vs sensitive",
+      "pi vs spi",
+      "sensitive personal information",
+      "data privacy types"
+    ],
+    "sectionId": "data-privacy-basics"
+  },
+  {
     "q": "What's the difference between SIL Ulit A and Ulit B?",
     "a": "SIL Ulit A is for customers who fully paid a previous Tonik loan (loyalty reloan — better rate, higher amount). SIL Ulit B (SIL Competitor) is for customers with an existing loan from a competitor (Home Credit, Salmon, Skyro, BillEase) — treated as their first Tonik loan, and requires 2 proof screenshots (QR/claim code + competitor loan history).",
     "keywords": [
@@ -416,6 +557,17 @@ const SIL_FAQS = [
       "sil competitor"
     ],
     "sectionId": "sil-competitor"
+  },
+  {
+    "q": "What's the max monthly installment as a percent of income?",
+    "a": "Tonik-adjusted guideline: 10-15% of net income (stricter than the 20-25% Philippine standard or the 30% global standard). Use this when assessing whether a loan amount is realistic for a customer.",
+    "keywords": [
+      "debt to income",
+      "max installment percent",
+      "income ratio",
+      "affordability guideline"
+    ],
+    "sectionId": "red-flag-customers"
   },
   {
     "q": "What's the SIL processing window / cutoff time?",
@@ -438,6 +590,17 @@ const SIL_FAQS = [
       "when use viber"
     ],
     "sectionId": "viber-escalations"
+  },
+  {
+    "q": "When is payday?",
+    "a": "Every 14th and 29th of the month. Payroll cutoff is every 5th and 20th. Salary is credited to your UnionBank pay card account.",
+    "keywords": [
+      "payday",
+      "when is payroll",
+      "salary schedule",
+      "payroll cutoff"
+    ],
+    "sectionId": "payroll-timekeeping"
   },
   {
     "q": "Who can avail of SIL?",
