@@ -12,6 +12,21 @@ const SIL_FAQS = [
     "aTL": "Hindi po pwede — ang PayHinga ay pwede lang i-opt into habang nag-a-apply pa lang. Hindi na ito pwedeng idagdag sa isang ongoing na SIL."
   },
   {
+    "q": "Do commissions change with the new processing fee?",
+    "a": "No — commissions and incentives remain exactly the same. The sales and approval process also stays unchanged. Only the Processing Fee itself changed, and only for new loan applications.",
+    "aTL": "Hindi po — pareho pa rin ang commissions at incentives. Pareho rin ang sales at approval process. Ang Processing Fee lang mismo ang nagbago, at para lang ito sa bagong loan applications.",
+    "keywords": [
+      "commissions change",
+      "incentives change processing fee",
+      "does bonus change"
+    ],
+    "keywordsTL": [
+      "nagbago ba commission",
+      "nagbago ba incentive"
+    ],
+    "sectionId": "sil-processing-fee-update"
+  },
+  {
     "q": "How can a customer pay their loan?",
     "a": "Three ways: 1) ECPay via GCash Bills Payment (Loans > Tonik Digital Bank), 2) ECPay OTC partners/kiosks (Palawan Pay, Cliqq, LBC, etc.), 3) Auto-debit from their Tonik Savings Account around 10pm on the due date. Always use the exact registered mobile number and exact EMI amount.",
     "keywords": [
@@ -227,6 +242,20 @@ const SIL_FAQS = [
     ],
     "sectionId": "sil-basket-financing",
     "aTL": "Hindi na po — na-discontinue ang Basket Financing para sa parehong tiers effective May 1, 2026. Huwag ito i-alok sa mga customer."
+  },
+  {
+    "q": "Is there a new processing fee for SIL Zero?",
+    "a": "A change to 12% has been announced but is NOT yet in effect. SIL Zero is still charging the current 3% Processing Fee. A separate announcement will confirm the exact effective date — don't quote 12% to a customer until then.",
+    "aTL": "May inanunsyong pagbabago sa 12% pero HINDI pa ito ipinapatupad. Ang SIL Zero ay kasalukuyang 3% Processing Fee pa rin. May hihintaying hiwalay na anunsyo para sa eksaktong effective date — huwag i-quote ang 12% sa customer hangga't wala pang kumpirmasyon.",
+    "keywords": [
+      "sil zero processing fee",
+      "sil zero 12%",
+      "is sil zero fee changing"
+    ],
+    "keywordsTL": [
+      "sil zero fee pagbabago"
+    ],
+    "sectionId": "sil-processing-fee-update"
   },
   {
     "q": "Never accept payment from a customer directly — is that really a rule?",
@@ -486,6 +515,22 @@ const SIL_FAQS = [
     "aTL": "27 booked contracts O ₱320,000 sa Sales Volume kada buwan (ang pinaka-bagong dating). Ang mga naunang memo ay nagsasabi ng 30/₱380,000 at 27/₱350,000 — ang 27/₱320,000 ang kasalukuyan."
   },
   {
+    "q": "What is the current SIL processing fee?",
+    "a": "As of September 8, 2026: SIL Standard, ULIT A, and ULIT B are 5% (up from 3%). SIL Zero is still 3% for now — a change to 12% has been announced but is not yet in effect; a separate announcement will confirm the exact date.",
+    "aTL": "Simula Setyembre 8, 2026: ang SIL Standard, ULIT A, at ULIT B ay 5% na (mula 3%). Ang SIL Zero ay 3% pa rin sa ngayon — may inanunsyong pagbabago sa 12% pero hindi pa ito ipinapatupad; may hihintaying hiwalay na anunsyo para sa eksaktong petsa.",
+    "keywords": [
+      "processing fee",
+      "current processing fee",
+      "pf update",
+      "how much is processing fee"
+    ],
+    "keywordsTL": [
+      "kasalukuyang processing fee",
+      "bagong processing fee"
+    ],
+    "sectionId": "sil-processing-fee-update"
+  },
+  {
     "q": "What is the internal verification code (Code 0/1/2)?",
     "a": "Code 0 = Verified Client (normal, honest). Code 1 = Suspicious Client (odd behavior, uninterested). Code 2 = Possible ID Fraud (ID looks fake or has suspicious details). Assign this after screening, before pressing Proceed.",
     "keywords": [
@@ -655,6 +700,22 @@ const SIL_FAQS = [
     ],
     "sectionId": "payroll-timekeeping",
     "aTL": "Tuwing ika-14 at ika-29 ng buwan. Ang payroll cutoff ay tuwing ika-5 at ika-20. Ang sweldo ay kine-credit sa UnionBank pay card account mo."
+  },
+  {
+    "q": "Which processing fee applies if the application was made before September 8, 2026?",
+    "a": "The old 3% Processing Fee still applies — if the application was approved before Sept 8 (even if still pending booking today), the rate that was in effect when it was filed carries through to booking. Only applications filed Sept 8, 2026 onward get the new 5%.",
+    "aTL": "Ang lumang 3% Processing Fee pa rin ang mag-a-apply — kung na-approve ang aplikasyon bago pa mag-Sept 8 (kahit pending pa ang booking ngayon), ang rate noong i-file ito ang dadalhin hanggang booking. Ang bagong 5% ay para lang sa mga aplikasyong na-file simula Sept 8, 2026.",
+    "keywords": [
+      "which fee applies",
+      "grandfathered processing fee",
+      "old rate new rate",
+      "application before september"
+    ],
+    "keywordsTL": [
+      "alin fee mag apply",
+      "lumang rate"
+    ],
+    "sectionId": "sil-processing-fee-update"
   },
   {
     "q": "Who can avail of SIL?",
