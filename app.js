@@ -11,6 +11,8 @@
   const confBanner = document.getElementById("confidential-banner");
   const langEnBtn = document.getElementById("lang-en");
   const langTlBtn = document.getElementById("lang-tl");
+  const whatsNewTab = document.getElementById("whats-new-tab");
+  const whatsNewTabLabel = document.getElementById("whats-new-tab-label");
 
   document.getElementById("org-name").textContent = meta.orgName;
   lastPublishedEl.textContent = "Last published: " + meta.lastPublished;
@@ -27,12 +29,14 @@
     try { localStorage.setItem("sil-lang", lang); } catch (e) {}
     langEnBtn.classList.toggle("active", lang === "en");
     langTlBtn.classList.toggle("active", lang === "tl");
+    whatsNewTabLabel.textContent = lang === "tl" ? "Ano ang Bago" : "What's New";
     route();
   }
   langEnBtn.addEventListener("click", () => setLang("en"));
   langTlBtn.addEventListener("click", () => setLang("tl"));
   langEnBtn.classList.toggle("active", lang === "en");
   langTlBtn.classList.toggle("active", lang === "tl");
+  whatsNewTabLabel.textContent = lang === "tl" ? "Ano ang Bago" : "What's New";
 
   function sectionById(id) {
     return sections.find((s) => s.id === id);
@@ -61,6 +65,12 @@
     homeLink.href = "#home";
     sidebarEl.appendChild(homeLink);
 
+    const whatsNewLink = document.createElement("a");
+    whatsNewLink.className = "nav-item whats-new-link";
+    whatsNewLink.textContent = lang === "tl" ? "🆕 Ano ang Bago" : "🆕 What's New";
+    whatsNewLink.href = "#whats-new";
+    sidebarEl.appendChild(whatsNewLink);
+
     categories.forEach((cat) => {
       const catSections = sections.filter((s) => s.category === cat.id);
       if (!catSections.length) return;
@@ -80,6 +90,33 @@
     });
   }
 
+  function daysAgo(dateStr) {
+    const d = new Date(dateStr + "T00:00:00");
+    const now = new Date();
+    return Math.floor((now - d) / (1000 * 60 * 60 * 24));
+  }
+
+  function renderWhatsNew() {
+    const items = window.SIL_ANNOUNCEMENTS || [];
+    if (!items.length) return "";
+    const heading = lang === "tl" ? "🆕 Ano ang Bago" : "🆕 What's New";
+    let html = `<div id="whats-new" class="whats-new"><h3 class="whats-new-heading">${heading}</h3><div class="whats-new-list">`;
+    items.forEach((item) => {
+      const title = lang === "tl" && item.titleTL ? item.titleTL : item.title;
+      const blurb = lang === "tl" && item.blurbTL ? item.blurbTL : item.blurb;
+      const isNew = daysAgo(item.date) <= 7;
+      const newBadge = isNew ? `<span class="new-badge">${lang === "tl" ? "BAGO" : "NEW"}</span>` : "";
+      html += `
+        <div class="whats-new-item" data-id="${item.sectionId || ""}">
+          <div class="whats-new-date">${item.date}${newBadge}</div>
+          <div class="whats-new-title">${title}</div>
+          <div class="whats-new-blurb">${blurb}</div>
+        </div>`;
+    });
+    html += `</div></div>`;
+    return html;
+  }
+
   function renderHome() {
     buildSidebar(null);
     const heroSub =
@@ -92,6 +129,7 @@
         <p class="sub">${heroSub}</p>
       </div>
     `;
+    html += renderWhatsNew();
     categories.forEach((cat) => {
       const catSections = sections.filter((s) => s.category === cat.id);
       if (!catSections.length) return;
@@ -112,6 +150,13 @@
       card.addEventListener("click", () => {
         window.location.hash = card.dataset.id;
       });
+    });
+    contentEl.querySelectorAll(".whats-new-item").forEach((item) => {
+      if (item.dataset.id) {
+        item.addEventListener("click", () => {
+          window.location.hash = item.dataset.id;
+        });
+      }
     });
   }
 
@@ -190,8 +235,17 @@
   function route() {
     const hash = window.location.hash.replace("#", "");
     if (!hash || hash === "home") {
+      whatsNewTab.classList.remove("active");
       renderHome();
+    } else if (hash === "whats-new") {
+      whatsNewTab.classList.add("active");
+      renderHome();
+      requestAnimationFrame(() => {
+        const el = document.getElementById("whats-new");
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
     } else {
+      whatsNewTab.classList.remove("active");
       renderSection(hash);
     }
   }
