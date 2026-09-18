@@ -245,8 +245,8 @@ const SIL_FAQS = [
   },
   {
     "q": "Is there a new processing fee for SIL Zero?",
-    "a": "A change to 12% has been announced but is NOT yet in effect. SIL Zero is still charging the current 3% Processing Fee. A separate announcement will confirm the exact effective date — don't quote 12% to a customer until then.",
-    "aTL": "May inanunsyong pagbabago sa 12% pero HINDI pa ito ipinapatupad. Ang SIL Zero ay kasalukuyang 3% Processing Fee pa rin. May hihintaying hiwalay na anunsyo para sa eksaktong effective date — huwag i-quote ang 12% sa customer hangga't wala pang kumpirmasyon.",
+    "a": "Yes — confirmed: SIL Zero's Processing Fee becomes 12% effective September 14, 2026 (up from 3%). Before that date, it's still 3%.",
+    "aTL": "Oo — kumpirmado na: ang Processing Fee ng SIL Zero ay magiging 12% simula Setyembre 14, 2026 (mula 3%). Bago ang petsang iyon, 3% pa rin.",
     "keywords": [
       "sil zero processing fee",
       "sil zero 12%",
@@ -516,8 +516,8 @@ const SIL_FAQS = [
   },
   {
     "q": "What is the current SIL processing fee?",
-    "a": "As of September 8, 2026: SIL Standard, ULIT A, and ULIT B are 5% (up from 3%). SIL Zero is still 3% for now — a change to 12% has been announced but is not yet in effect; a separate announcement will confirm the exact date.",
-    "aTL": "Simula Setyembre 8, 2026: ang SIL Standard, ULIT A, at ULIT B ay 5% na (mula 3%). Ang SIL Zero ay 3% pa rin sa ngayon — may inanunsyong pagbabago sa 12% pero hindi pa ito ipinapatupad; may hihintaying hiwalay na anunsyo para sa eksaktong petsa.",
+    "a": "Each variant has its own date: SIL Standard and ULIT B are 5% effective Sept 8, 2026. SIL ULIT A is 0% effective Sept 12, 2026 (a decrease, not an increase). SIL Zero is 12% effective Sept 14, 2026. Before each date, the old 3% still applies.",
+    "aTL": "May sariling petsa ang bawat variant: ang SIL Standard at ULIT B ay 5% simula Sept 8, 2026. Ang SIL ULIT A ay 0% simula Sept 12, 2026 (pagbaba, hindi pagtaas). Ang SIL Zero ay 12% simula Sept 14, 2026. Bago ang bawat petsa, ang lumang 3% pa rin ang mag-a-apply.",
     "keywords": [
       "processing fee",
       "current processing fee",
@@ -529,6 +529,22 @@ const SIL_FAQS = [
       "bagong processing fee"
     ],
     "sectionId": "sil-processing-fee-update"
+  },
+  {
+    "q": "What is the current VAS Penetration Rate target?",
+    "a": "80%, effective September 1, 2026 (raised from 75%). This is one of the 5 KPIs used for bonus eligibility.",
+    "aTL": "80%, simula Setyembre 1, 2026 (tumaas mula 75%). Isa ito sa 5 KPIs na ginagamit para sa bonus eligibility.",
+    "keywords": [
+      "vas penetration rate",
+      "vas target",
+      "current vas rate",
+      "vas penetration target"
+    ],
+    "keywordsTL": [
+      "vas penetration ngayon",
+      "bagong vas target"
+    ],
+    "sectionId": "kpi-overview"
   },
   {
     "q": "What is the internal verification code (Code 0/1/2)?",
@@ -555,6 +571,20 @@ const SIL_FAQS = [
     ],
     "sectionId": "rbp-tables",
     "aTL": "Depende sa segment: Zero-DP segment mula 0%, Starter sa 10%, Basic sa 20%, Advanced sa 30%, Premium sa 50%+. Ang mas mataas na DP ay nagbubukas ng mas mababang add-on rate — laging i-negotiate ang pinakamataas na DP na kaya ng customer."
+  },
+  {
+    "q": "What is the processing fee for SIL ULIT A?",
+    "a": "0%, effective September 12, 2026 — this is a decrease from the previous 3%. Note that ULIT A did NOT rise to 5% like SIL Standard and ULIT B did.",
+    "aTL": "0%, simula Setyembre 12, 2026 — pagbaba ito mula sa dating 3%. Tandaan: HINDI tumaas ang ULIT A sa 5% tulad ng SIL Standard at ULIT B.",
+    "keywords": [
+      "ulit a processing fee",
+      "ulit a fee",
+      "sil repeat processing fee"
+    ],
+    "keywordsTL": [
+      "ulit a fee bago"
+    ],
+    "sectionId": "sil-processing-fee-update"
   },
   {
     "q": "What is the Tendo salary loan?",
